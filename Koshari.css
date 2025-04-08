@@ -70,32 +70,32 @@ a {
     margin-bottom: -5px;
 }
 
-.header .container .menu {
+.header .container .nav_data {
     direction: rtl;
 }
 
-.header .container .menu span a {
+.header .container .nav_data span a {
     direction: rtl;
 }
 
-.header .container .menu span a i {
+.header .container .nav_data span a i {
     margin-left: 5px;
 }
 
-.header .container .menu span:not(.s) {
+.header .container .nav_data span:not(.s) {
     padding: 0px 20px;
     color: red;
     font-weight: 900;
     transition: 0.3s;
 }
 
-.header .container .menu span:not(.s):hover {
+.header .container .nav_data span:not(.s):hover {
     background-color: #ff00003b;
     padding: 29px 25px;
 }
 
 
-.header .container .menu span a {
+.header .container .nav_data span a {
     color: white;
 }
 
@@ -104,23 +104,23 @@ a {
         flex-direction: column;
     }
 
-    .header .menu {
+    .header .nav_data {
         display: flex;
         margin-top: 30px;
         margin-bottom: 20px;
     }
 
-    .header .menu span.s {
+    .header .nav_data span.s {
         display: none;
         padding: 5px 0px;
     }
 
-    .header .menu span:not(.s):hover {
+    .header .nav_data span:not(.s):hover {
         background-color: #ff00003b;
         padding: 5px 10px;
     }
 
-    .header .menu span:not(.s) {
+    .header .nav_data span:not(.s) {
         padding: 0px 15px;
     }
 }
@@ -129,10 +129,10 @@ a {
     .header .container .rest-logo img {
         max-width: 125px;
     }
-    .header .container .menu span:not(.s) {
+    .header .container .nav_data span:not(.s) {
         padding: 0px 7px;
     }
-    .header .container .menu span:not(.s):hover {
+    .header .container .nav_data span:not(.s):hover {
         background-color: #ff00003b;
         padding: 0px 7px;
     } 
