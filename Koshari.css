@@ -1,0 +1,571 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+:root {
+    --main-color: red;
+    --main-color-alt: ;
+    --main-transition: 0.3s;
+    --main-padding-top: 100px;
+    --main-padding-bottom: 100px;
+    --section-background: #ececec;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Cairo", sans-serif;
+    background-color: #b7b3b3
+}
+
+a {
+    text-decoration: none;
+}
+
+
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  /* Small */
+  @media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+  }
+  /* Medium */
+  @media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+  }
+  /* Large */
+  @media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+  }
+
+
+
+/* Start Header */
+.header {
+    background-color: #630808;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header .container .rest-logo img {
+    max-width: 160px;
+    margin-bottom: -5px;
+}
+
+.header .container .menu {
+    direction: rtl;
+}
+
+.header .container .menu span a {
+    direction: rtl;
+}
+
+.header .container .menu span a i {
+    margin-left: 5px;
+}
+
+.header .container .menu span:not(.s) {
+    padding: 0px 20px;
+    color: red;
+    font-weight: 900;
+    transition: 0.3s;
+}
+
+.header .container .menu span:not(.s):hover {
+    background-color: #ff00003b;
+    padding: 29px 25px;
+}
+
+
+.header .container .menu span a {
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .header .container {
+        flex-direction: column;
+    }
+
+    .header .menu {
+        display: flex;
+        margin-top: 30px;
+        margin-bottom: 20px;
+    }
+
+    .header .menu span.s {
+        display: none;
+        padding: 5px 0px;
+    }
+
+    .header .menu span:not(.s):hover {
+        background-color: #ff00003b;
+        padding: 5px 10px;
+    }
+
+    .header .menu span:not(.s) {
+        padding: 0px 15px;
+    }
+}
+
+@media (max-width: 992px) {
+    .header .container .rest-logo img {
+        max-width: 125px;
+    }
+    .header .container .menu span:not(.s) {
+        padding: 0px 7px;
+    }
+    .header .container .menu span:not(.s):hover {
+        background-color: #ff00003b;
+        padding: 0px 7px;
+    } 
+}
+/* End Header */
+
+
+/* Start Home */
+.home {
+    background-image: url(../imgs/kitchen-doodle-seamless-pattern-backround-600nw-2354307595.webp);
+    position: relative;
+    padding-bottom: 200px;
+    direction: rtl;
+}
+
+.home .container {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    column-gap: 200px;
+    padding-top: 100px;
+    padding-bottom: 50px;
+    align-items: center;
+}
+
+.home::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #a60017e0;
+}
+
+.home .container .info p:first-child {
+    color: white;
+    position: relative;
+    margin-top: 100px;
+    background-color: red;
+    width: fit-content;
+    border-radius: 10px;
+    padding: 11px;
+    font-size: larger;
+}
+
+.home .container .info p.name {
+    color: white;
+    position: relative;
+    width: fit-content;
+    border-radius: 10px;
+    font-size: xxx-large;
+    margin-top: 45px;
+}
+
+.home .container .info p.bla {
+    color: white;
+    position: relative;
+    width: fit-content;
+    border-radius: 10px;
+    padding: 11px;
+    font-size: x-large;
+    margin-bottom: 80px;
+    text-transform: capitalize;
+}
+
+.home .container .info .more a {
+    color: red;
+    background-color: white;
+    position: relative;
+    width: fit-content;
+    border-radius: 20px;
+    padding: 15px 30px;
+    font-size: x-large;
+    transition: 0.3s;
+}
+
+.home .container .info .more a:hover {
+    color: white;
+    background-color: red;
+}
+
+.home .container .rotate {
+    width: 550px;
+    text-align: center;
+}
+
+.home .container .rotate img {
+    position: relative;
+    border-style: none;
+    width: 80%;
+    top: 50px;
+    animation: rotate 10s linear infinite;
+}
+
+@keyframes rotate {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@media (max-width: 768px) {
+    .home .rotate {
+        display: none;
+    }
+
+    .home .container .info {
+        text-align: center;
+    }
+
+    .home .container {
+        justify-content: center;
+    }
+
+    .home p.name {
+        font-size: xx-large;
+        width: auto;
+    }
+
+    .home p.bla {
+        font-size: large;
+    }
+
+    .home .more a, .home h1 {
+        font-size: medium;
+    }
+
+    .home h1 {
+        position: relative;
+        left: -30%;
+    }
+
+    .home .container .info p:first-child,
+    .home .container .info p.name {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+/* End Home */
+
+
+/* Start Menu */
+.menu .container h1 {
+    width: fit-content;
+    margin: 100px auto 50px;
+    background-color: red;
+    padding: 25px 100px;
+    border-radius: 20px 0px 20px 0px;
+    transition: 0.5s;
+    animation: white 0.5s;
+}
+
+.menu .container h1:hover {
+    background-color: red;
+    color: white;
+    border-radius: 0px 30px 0px 30px;
+}
+
+.menu .container .box-menu {
+    display: grid;
+    padding: 100px 0px 130px;
+    gap: 46px;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+}
+
+.menu .container .box-menu .item {
+    text-align: center;
+    padding: 30px 0px;
+    background-color: #eee;
+    box-shadow: 6px 6px 17px #888888;
+    width: 240px;
+    justify-self: center;
+    overflow: hidden;
+}
+
+.menu .container .box-menu .image {
+    position: relative;
+}
+.menu .container .box-menu .image::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(255 255 255 / 20%);
+    width: 0;
+    height: 0;
+    opacity: 0;
+    z-index: 2;
+}
+
+.menu .container .box-menu .image:hover::before {
+    animation: flashing 0.7s;
+}
+
+@keyframes flashing {
+    0%,
+    40% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+      width: 200%;
+      height: 200%;
+    }
+  }
+
+.menu .container .box-menu .item img {
+    max-width: 100%;
+    margin-bottom: 20px;
+    margin-top: -30px;
+    max-height: 235px;
+    width: 273px;
+}
+
+.menu .container .box-menu .item .name {
+    margin: 0px 0px 30px;
+    font-size: x-large;
+    font-weight: bold;
+}
+.menu .container .box-menu .item .price {
+    margin: 0px 0px 30px;
+    font-size: large;
+    font-weight: bold;
+    color: red;
+}
+.menu .container .box-menu .item .order input {
+    text-align: center;
+    font-weight: bold;
+    outline-color: red;
+    padding: 2px;
+}
+.menu .container .box-menu .item .order {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+.menu .container .box-menu .item .order a {
+    color: red;
+    font-size: large;
+}
+.menu .container .box-menu .item .order a:hover {
+    animation: ord 1s linear;
+}
+@keyframes ord {
+    0% {
+        transform: translateX(0px);
+    }
+    25% {
+        transform: translateX(5px);
+    }
+    50% {
+        transform: translateX(0px);
+    }
+    50% {
+        transform: translateX(-5px);
+    }
+    100% {
+        transform: translateX(0px);
+    }
+}
+
+@media (max-width: 768px) {
+    .menu .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+/* End Menu */
+
+
+/* Start Footer */
+.footer {
+    background-image: url(../imgs/av.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.footer::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.664);
+}
+
+.footer .container {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    align-items: center;
+}
+
+.footer .container .email {
+    width: fit-content;
+    height: fit-content;
+    justify-content: space-between;
+    color: white;
+    position: relative;
+}
+
+.footer .container .email input {
+    outline: none;
+    text-align: center;
+    width: 300px;
+    height: 50px;
+}
+
+::placeholder {
+    color: red;
+    font-weight: bold;
+}
+
+.footer .container .email input:focus::placeholder {
+    color: transparent;
+}
+
+.footer .container .email input:focus {
+    color: red;
+    color: red;
+    text-align: start;
+    padding-left: 15px;
+}
+
+
+.footer .container .email i {
+    position: absolute;
+    color: red;
+    /* display: flex; */
+    top: 50%;
+    transform: translateY(-50%);
+    left: 90%;
+}
+
+.footer .container .box {
+    color: white;
+    text-align: end;
+}
+
+.footer .container .box p:nth-child(1) {
+    font-size: xx-large;
+}
+
+.footer .container .line {
+    position: absolute;
+    display: block;
+    width: 90%;
+    height: 1px;
+    background-color: white;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.footer .social {
+    text-align: center;
+    padding: 30px 0;
+    width: fit-content;
+    background-color: #00000094;
+    margin: 0 auto;
+}
+
+.footer .social a {
+    color: white;
+    position: relative;
+    padding: 0 10px;
+}
+
+.footer .social a:nth-child(1):hover {
+    color: #3b5998;
+}
+
+.footer .social a:nth-child(2):hover {
+    color: #00aced;
+}
+
+.footer .social a:nth-child(3):hover {
+    color: #bc2a8d;
+}
+
+.footer .copy {
+    background-color: #00000080;
+}
+
+.footer .copy .container {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.footer .copy p {
+    color: white;
+}
+
+.footer .copy .rest-logo img {
+    max-width: 160px;
+    margin-bottom: -5px;
+}
+
+@media (max-width: 768px) {
+    .footer .container {
+        flex-direction: column-reverse;
+        padding-bottom: 0;
+    }
+
+    .email {
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+
+    .email input {
+        outline: none;
+        text-align: center;
+        width: 250px;
+        height: 45px;
+    }
+
+    .box p:nth-child(1) {
+        font-size: x-large;
+        text-align: center;
+    }
+
+    .copy .container {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    .copy .rest-logo {
+        display: none;
+    }
+}
+/* End Footer */
