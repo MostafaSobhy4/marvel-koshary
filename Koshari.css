@@ -142,7 +142,7 @@ a {
 
 /* Start Home */
 .home {
-    background-image: url(../imgs/kitchen-doodle-seamless-pattern-backround-600nw-2354307595.webp);
+    background-image: url(imgs/kitchen-doodle-seamless-pattern-backround-600nw-2354307595.webp);
     position: relative;
     padding-bottom: 200px;
     direction: rtl;
@@ -407,7 +407,7 @@ a {
 
 /* Start Footer */
 .footer {
-    background-image: url(../imgs/av.jpg);
+    background-image: url(imgs/av.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
