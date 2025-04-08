@@ -274,9 +274,12 @@ a {
 
 
 /* Start Menu */
+.menu {
+    margin-top: 80px;
+}
 .menu .container h1 {
     width: fit-content;
-    margin: 100px auto 50px;
+    margin: 0px auto 50px;
     background-color: red;
     padding: 25px 100px;
     border-radius: 20px 0px 20px 0px;
