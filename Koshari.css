@@ -91,7 +91,7 @@ a {
 
 .header .container .nav_data span:not(.s):hover {
     background-color: #ff00003b;
-    padding: 29px 25px;
+    padding: 25px;
 }
 
 
@@ -451,7 +451,6 @@ a {
 
 ::placeholder {
     color: red;
-    font-weight: bold;
 }
 
 .footer .container .email input:focus::placeholder {
@@ -572,3 +571,141 @@ a {
     }
 }
 /* End Footer */
+
+/************************************************************************/
+
+.aboutwords {
+    direction: rtl;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 80px;
+    background-color: #00000017;
+}
+
+.aboutwords p {
+    font-size: 24px;
+    line-height: 2;
+    margin-top: 50px;
+}
+
+.aboutwords h1 {
+    color: white;
+    background-color: red;
+    position: relative;
+    width: fit-content;
+    border-radius: 20px;
+    padding: 15px 30px;
+    font-size: xx-large;
+    transition: 0.3s;
+}
+
+.aboutwords h1:hover {
+    color: red;
+    background-color: white;
+}
+
+.login, .signup { 
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.login-page, .signup-page {
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+    background-color: white;
+    padding: 50px 70px;
+    border-radius: 10px;
+}
+
+.signup-page {
+    margin-left: auto;
+    margin-right: auto;
+    width: 500px;
+    background-color: white;
+    padding: 50px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.signup-page h2 {
+    font-size: 25px;
+}
+
+.signup-page .social {
+    text-align: center;
+}
+
+.signup-page .social a:last-of-type {
+    color: black;
+}
+
+.signup-page .social a {
+    display: inline-block;
+    font-size: 20px;
+    margin: 5px;
+    color: #007bff;
+    text-decoration: none;
+}
+
+.signup-page .social + p,
+form + p {
+    margin: 15px 0;
+    color: gray;
+}
+
+.signup p:first-of-type {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.signup p:first-of-type::before {
+    content: "";
+    position: absolute;
+    width: 40%;
+    height: 1px;
+    background-color: black;
+    right: 54%;
+    top: 50%;
+}
+
+.signup p:first-of-type::after {
+    content: "";
+    position: absolute;
+    width: 40%;
+    height: 1px;
+    background-color: black;
+    left: 54%;
+    top: 50%;
+}
+
+
+.login-page button, .signup-page button {
+    color: white;
+    background-color: black;
+    padding: 10px 10px;
+    cursor: pointer;
+    /* width: 50px; */
+    border-radius: 5px;
+}
+
+.login-page form,
+.signup-page form {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-page label,
+.signup-page label {
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.login-page input,
+.signup-page input {
+    margin-top: 10px;
+    padding: 10px;
+    width: 280px;
+}
+
+
