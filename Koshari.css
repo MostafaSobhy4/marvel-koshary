@@ -76,6 +76,8 @@ a {
 
 .header .container .nav_data span a {
     direction: rtl;
+    padding: 25px 15px;
+    color: white;
 }
 
 .header .container .nav_data span a i {
@@ -94,10 +96,6 @@ a {
     padding: 25px;
 }
 
-
-.header .container .nav_data span a {
-    color: white;
-}
 
 @media (max-width: 768px) {
     .header .container {
@@ -429,8 +427,8 @@ a {
     position: relative;
     display: flex;
     justify-content: space-between;
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding-top: 20px;
+    padding-bottom: 20px;
     align-items: center;
 }
 
@@ -574,21 +572,76 @@ a {
 
 /************************************************************************/
 
-.aboutwords {
+.aboutwords, .branches, .contactus {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     direction: rtl;
     margin-left: auto;
     margin-right: auto;
     padding: 80px;
-    background-color: #00000017;
+    background-color: #ffffff4a;
 }
 
-.aboutwords p {
+.branches, .contactus {
+    align-items: self-start;
+}
+
+.contactus p {
+    font-size: 16px;
+}
+
+.contactus hr {
+    width: 260px;
+    background-color: black;
+    color: black;
+    height: 1px;
+    border: 0;
+    margin-right: 0;
+}
+
+.contactus a, 
+.contactus p#hyphen {
+    display: contents;
+}
+
+.contactus a {
+    font-weight: bold;
+}
+
+.contactus a:nth-of-type(1) {
+    color: #1877F2;
+}
+.contactus a:nth-of-type(2) {
+    color: #E1306C;
+}
+.contactus a:nth-of-type(3) {
+    color: #010101;
+}
+
+.contactus p#hyphen {
+    font-size: large;
+}
+
+.contactus p:first-of-type {
+    font-size: 20px;
+}
+
+.aboutwords p,
+.branches ul {
     font-size: 24px;
     line-height: 2;
-    margin-top: 50px;
+    margin-top: 10px;
+    margin-bottom: 40px;
 }
 
-.aboutwords h1 {
+.branches ul>li:not(ul>ul>li) {
+    font-size: 26px;
+}
+
+.aboutwords h1, 
+.branches h1,
+.contactus h1 {
     color: white;
     background-color: red;
     position: relative;
@@ -597,11 +650,57 @@ a {
     padding: 15px 30px;
     font-size: xx-large;
     transition: 0.3s;
+    align-self: self-start;
 }
 
-.aboutwords h1:hover {
+.aboutwords h1:hover,
+.branches h1:hover,
+.contactus h1:hover {
     color: red;
     background-color: white;
+}
+
+@media (max-width: 600px) {
+    .aboutwords p, 
+    .branches ul
+    {
+        font-size: 18px;
+        line-height: 1.5;
+        margin-top: 50px;
+        width: 250px;
+        padding-right: 0px;
+    }
+    .aboutwords h1,
+    .branches h1,
+    .contactus h1 {
+        font-size: x-large;
+        align-self: center;
+    }
+
+    .contactus h2 {
+        font-size: larger;
+    }
+
+    .contactus p {
+    font-size: 15px;
+}
+
+    .contactus hr {
+        width: 245px;
+    }
+
+    .contactus a {
+        font-size: 12px;
+    }
+
+    .contactus p:first-of-type {
+        font-size: 18px;
+    }
+    
+    .branches {
+        align-items: self-start;
+    }
+
 }
 
 .login, .signup { 
@@ -618,13 +717,22 @@ a {
     border-radius: 10px;
 }
 
+.login-page {
+    background-image: url(imgs/loginwal3.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+
 .signup-page {
     margin-left: auto;
     margin-right: auto;
-    width: 500px;
-    background-color: white;
+    width: 440px;
+    background-image: url(imgs/signupwal1.jpg);
+    background-size: cover;
+    background-position-x: -70px;
+    background-position-y: -70px;
     padding: 50px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .signup-page h2 {
@@ -685,7 +793,6 @@ form + p {
     background-color: black;
     padding: 10px 10px;
     cursor: pointer;
-    /* width: 50px; */
     border-radius: 5px;
 }
 
@@ -707,5 +814,29 @@ form + p {
     padding: 10px;
     width: 280px;
 }
+
+@media (max-width: 768px) {
+    .login-page, .signup-page {
+        margin-left: auto;
+        margin-right: auto;
+        width: fit-content;
+        background-color: white;
+        padding: 10px 20px;
+        border-radius: 10px;
+    }
+
+    .login-page label,
+    .signup-page label {
+        margin-top: 15px;
+    }
+
+    .login-page input,
+    .signup-page input {
+        margin-top: 5px;
+        padding: 5px;
+        width: 250px;
+    }
+}
+
 
 
