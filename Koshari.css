@@ -875,6 +875,23 @@ form + p {
         padding: 5px;
         width: 250px;
     }
+
+    .login-page {
+        animation: spiderDrop 2s ease-out forwards;
+    }
+
+    @keyframes spiderDrop {
+    0% {
+        background-position-y: -130px;
+    }
+    50% {
+        background-position-y: -80px;
+    }
+    100% {
+        background-position-y: -130px;
+    }
+}
+
 }
 
 
