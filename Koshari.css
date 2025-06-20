@@ -747,9 +747,21 @@ a {
 .login-page {
     background-image: url(imgs/loginwal3.jpg);
     background-size: cover;
-    background-position: center;
+    background-position: center top;
+    animation: spiderDrop 3s ease-out forwards;
 }
 
+@keyframes spiderDrop {
+    0% {
+        background-position-y: -180px;
+    }
+    50% {
+        background-position-y: -90px;
+    }
+    100% {
+        background-position-y: -180px;
+    }
+}
 
 .signup-page {
     margin-left: auto;
@@ -757,7 +769,7 @@ a {
     width: 440px;
     background-image: url(imgs/signupwal1.jpg);
     background-size: cover;
-    background-position-x: -70px;
+    background-position-x: -40px;
     background-position-y: -70px;
     padding: 50px 50px 5px;
 }
