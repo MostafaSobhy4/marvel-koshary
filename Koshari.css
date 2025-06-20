@@ -80,7 +80,7 @@ a {
 }
 
 .header .container .nav_data span:not(.s) {
-    padding: 0px 20px;
+    padding: 0px 5px;
     color: red;
     font-weight: 900;
     transition: 0.3s;
@@ -130,15 +130,18 @@ a {
 
 @media (max-width: 992px) {
     .header .container .rest-logo img {
-        max-width: 125px;
+        max-width: 120px;
     }
     .header .container .nav_data span:not(.s) {
-        padding: 0px 7px;
+        padding: 0px 3px;
     }
     .header .container .nav_data span:not(.s):hover {
         background-color: #ff00003b;
         padding: 0px 7px;
     } 
+    .header .container .nav_data span a {
+        padding: 15px 5px;
+    }
 }
 /* End Header */
 
@@ -766,11 +769,11 @@ a {
 .signup-page {
     margin-left: auto;
     margin-right: auto;
-    width: 440px;
+    width: 400px;
     background-image: url(imgs/signupwal1.jpg);
     background-size: cover;
     background-position-x: -40px;
-    background-position-y: -70px;
+    background-position-y: -60px;
     padding: 50px 50px 5px;
 }
 
@@ -843,15 +846,15 @@ form + p {
 
 .login-page label,
 .signup-page label {
-    margin-top: 20px;
+    margin-top: 10px;
     font-weight: bold;
 }
 
 .login-page input,
 .signup-page input {
     margin-top: 10px;
-    padding: 10px;
-    width: 280px;
+    padding: 7px;
+    width: 270px;
 }
 
 @media (max-width: 768px) {
@@ -864,16 +867,22 @@ form + p {
         border-radius: 10px;
     }
 
+    .signup-page {
+        background-position-x: -70px;
+        background-position-y: -55px;
+        width: 320px;
+    }
+
     .login-page label,
     .signup-page label {
-        margin-top: 15px;
+        margin-top: 10px;
     }
 
     .login-page input,
     .signup-page input {
         margin-top: 5px;
-        padding: 5px;
-        width: 250px;
+        padding: 4px;
+        width: 200px;
     }
 
     .login-page {
