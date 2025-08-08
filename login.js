@@ -1,4 +1,4 @@
-let accounts = JSON.parse(localStorage.getItem("accounts"));
+let accounts = JSON.parse(localStorage.getItem("accounts")) || [];
 let username = document.querySelector("#log-username");
 let password = document.querySelector("#log-password");
 
