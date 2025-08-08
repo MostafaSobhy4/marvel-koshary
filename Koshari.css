@@ -383,6 +383,7 @@ a {
 .menu .container .box-menu .item .order a {
     color: red;
     font-size: large;
+    cursor: pointer;
 }
 .menu .container .box-menu .item .order a:hover {
     animation: ord 1s linear;
