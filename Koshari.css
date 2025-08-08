@@ -8,8 +8,7 @@
     --main-color: red;
     --main-color-alt: ;
     --main-transition: 0.3s;
-    --main-padding-top: 100px;
-    --main-padding-bottom: 100px;
+    --main-padding-or-margin-top-or-bottom: 100px;
     --section-background: #ececec;
 }
 
@@ -168,7 +167,7 @@ a {
     background-size: cover;
     display: flex;
     column-gap: 200px;
-    padding-top: 100px;
+    padding-top: var(--main-padding-or-margin-top-or-bottom);
     padding-bottom: 50px;
     align-items: center;
 }
@@ -176,7 +175,7 @@ a {
 .home .container .info p:first-child {
     color: white;
     position: relative;
-    margin-top: 100px;
+    margin-top: var(--main-padding-or-margin-top-or-bottom);
     background-color: red;
     width: fit-content;
     border-radius: 10px;
@@ -288,7 +287,7 @@ a {
     width: fit-content;
     margin: 0px auto 50px;
     background-color: red;
-    padding: 25px 100px;
+    padding: 25px var(--main-padding-or-margin-top-or-bottom);
     border-radius: 20px 0px 20px 0px;
     transition: 0.5s;
     animation: white 0.5s;
@@ -302,7 +301,7 @@ a {
 
 .menu .container .box-menu {
     display: grid;
-    padding: 100px 0px 130px;
+    padding: var(--main-padding-or-margin-top-or-bottom) 0px 130px;
     gap: 46px;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
 }
@@ -897,6 +896,16 @@ form + p {
     margin-top: 10px;
     padding: 7px;
     width: 270px;
+}
+
+.login-page .password-field {
+    width: 300px;
+}
+
+.signup-page #toggle-password,
+.signup-page #toggle-confirm-password,
+.login-page #toggle-password {
+    cursor: pointer;
 }
 
 @media (max-width: 768px) {

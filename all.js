@@ -12,12 +12,13 @@ ordDet.appendChild(it_name);
 ordDet.appendChild(it_price);
 ordDet.appendChild(it_Quantity);
 
-
 pop.appendChild(ordDet);
 
 let ordereAdd = document.querySelector(".ordereAdd");
 let addButtonItem = document.querySelectorAll(".addItem");
 
+
+let counter;
 
 addButtonItem.forEach((butt) => {
     butt.onclick = function() {
@@ -40,5 +41,5 @@ addButtonItem.forEach((butt) => {
 })
 
 
-
+/******************************************************************************************/
 
