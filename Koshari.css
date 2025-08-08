@@ -927,6 +927,7 @@ form + p {
     .login-page label,
     .signup-page label {
         margin-top: 10px;
+        font-size: 15px;
     }
 
     .login-page input,
@@ -938,6 +939,11 @@ form + p {
 
     .login-page {
         animation: spiderDrop 2s ease-out forwards;
+    }
+    
+    .login-page #pass-msg,
+    .signup-page #pass-msg {
+        font-size: smaller;
     }
 
     @keyframes spiderDrop {

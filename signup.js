@@ -31,7 +31,6 @@ function createAccount() {
     let password = document.getElementById("signup-pass").value;
     let password_conf = document.getElementById("confirm-pass").value;
     let pass_msg = document.getElementById("pass-msg");
-    let message = document.createTextNode("Passwords do not match.");
 
     if(password === password_conf) {
         pass_msg.textContent = "";
@@ -58,6 +57,6 @@ function createAccount() {
     }
 
     else {
-        pass_msg.appendChild(message);
+        pass_msg.textContent = "Passwords do not match.";
     }
 }
