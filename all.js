@@ -42,4 +42,30 @@ addButtonItem.forEach((butt) => {
 
 
 /******************************************************************************************/
+let user = document.querySelector(".user");
+let logout_btn = document.querySelector(".logout");
 
+if (user) user.style.display = "none";
+
+if (logout_btn) logout_btn.style.display = "none";
+
+if (sessionStorage.getItem("loggedInUser")) {
+    let nav_data = document.querySelector(".nav_data");
+    let loggedInUser = sessionStorage.getItem("loggedInUser");
+    
+    if(nav_data.children.length > 0) {
+        nav_data.removeChild(nav_data.children[nav_data.children.length - 1]);
+    }
+    
+    user.style.display = "block";
+    user.children[0].textContent = `Welcome, ${loggedInUser}`;
+    user.children[0].style.color = "white";
+
+    logout_btn.style.display = "block";
+
+    logout_btn.addEventListener("click", (e) => {
+        sessionStorage.removeItem("loggedInUser");
+        window.location.href = "login.html";
+    })
+    
+}

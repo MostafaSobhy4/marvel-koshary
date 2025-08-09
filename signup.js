@@ -26,15 +26,19 @@ signup_form.addEventListener('submit', function(e) {
 });
 
 function createAccount() {
+    let firstname = document.getElementById("firstname").value;
     let username = document.getElementById("username").value;
     let email = document.getElementById("email").value;
     let password = document.getElementById("signup-pass").value;
     let password_conf = document.getElementById("confirm-pass").value;
     let pass_msg = document.getElementById("pass-msg");
 
+    sessionStorage.removeItem("loggedInUser");
+
     if(password === password_conf) {
         pass_msg.textContent = "";
         let accountData = {
+            firstname: firstname,
             username: username,
             email: email,
             password: password
@@ -48,11 +52,14 @@ function createAccount() {
 
         alert("Account created successfully!");
 
+        document.getElementById("firstname").value = "";
         document.getElementById("username").value = "";
         document.getElementById("email").value = "";
         document.getElementById("signup-pass").value = "";
         document.getElementById("confirm-pass").value = "";
-        
+
+        sessionStorage.setItem("loggedInUser", accountData.firstname);
+
         window.location.href = "index.html";
     }
 

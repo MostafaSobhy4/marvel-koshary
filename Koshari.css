@@ -69,6 +69,12 @@ a {
     align-items: center;
 }
 
+.header .container .user {
+    padding: 10px 2px;
+    border: 2px solid red;
+    width: fit-content;
+}
+
 .header .container .rest-logo img {
     max-width: 160px;
     margin-bottom: -5px;
@@ -125,6 +131,12 @@ a {
     .header .nav_data span:not(.s) {
         padding: 0px 15px;
     }
+
+    .header .container .user {
+        padding: 2px;
+        font-size: small;
+        width: 116px;
+    }
 }
 
 @media (max-width: 992px) {
@@ -140,6 +152,11 @@ a {
     } 
     .header .container .nav_data span a {
         padding: 15px 5px;
+    }
+    .header .container .user {
+        padding: 2px;
+        font-size: small;
+        width: fit-content;
     }
 }
 /* End Header */
@@ -810,10 +827,10 @@ a {
 .signup-page {
     margin-left: auto;
     margin-right: auto;
-    width: 400px;
+    width: 420px;
     background-image: url(imgs/signupwal1.jpg);
     background-size: cover;
-    background-position-x: -40px;
+    background-position-x: -80px;
     background-position-y: -60px;
     padding: 50px 50px 5px;
 }
@@ -919,7 +936,7 @@ form + p {
     }
 
     .signup-page {
-        background-position-x: -70px;
+        background-position-x: -95px;
         background-position-y: -55px;
         width: 320px;
     }
