@@ -35,7 +35,7 @@ loginForm.addEventListener("submit", (e) => {
 
     if(loggedIn) {
         alert("You have successfully logged in!");
-        window.location.href = "index.html";
+        window.location.href = "../index.html";
     } else {
         pass_msg.style.marginTop = "15px";
         pass_msg.textContent = "Username or password is incorrect.";

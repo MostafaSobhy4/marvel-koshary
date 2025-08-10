@@ -18,7 +18,8 @@ html {
 
 body {
     font-family: "Cairo", sans-serif;
-    background-color: #b7b3b3
+    /* background-color: #ffbeac; */
+    background-color: #b7b3b3;
 }
 
 a {
@@ -181,7 +182,7 @@ a {
 
 /* Start Home */
 .home {
-    background-image: url(imgs/kitchen-doodle-seamless-pattern-backround-600nw-2354307595.webp);
+    background-image: url(../imgs/kitchen-doodle-seamless-pattern-backround-600nw-2354307595.webp);
     position: relative;
     padding-bottom: 200px;
     direction: rtl;
@@ -453,23 +454,33 @@ a {
     z-index: 3;
     border-radius: 5px;
     box-shadow: 10px 10px 8px rgba(0, 0, 0, 0.324);
+    transition: all 0.3s ease-in-out; /* ⬅ ناعمة أكتر */
 }
 
 
 @keyframes pop {
     0% {
         opacity: 0;
+        transform: scale(0.9);
     }
-    20% {
+    15% {
         opacity: 1;
+        transform: scale(1.05);
     }
-    80% {
+    50% {
         opacity: 1;
+        transform: scale(1);
+    }
+    85% {
+        opacity: 1;
+        transform: scale(1.05);
     }
     100% {
         opacity: 0;
+        transform: scale(0.9);
     }
 }
+
 
 @media (max-width: 768px) {
     .menu .container {
@@ -491,7 +502,7 @@ a {
 
 /* Start Footer */
 .footer {
-    background-image: url(imgs/av.jpg);
+    background-image: url(../imgs/av.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -681,6 +692,13 @@ a {
 
 .contactus p {
     font-size: 16px;
+    font-family: system-ui;
+
+}
+
+.contactus h2 {
+    font-family: system-ui;
+
 }
 
 .contactus hr {
@@ -720,15 +738,21 @@ a {
 }
 
 .aboutwords p,
-.branches ul {
+.branches ul
+{
     font-size: 24px;
     line-height: 2;
     margin-top: 10px;
     margin-bottom: 40px;
+    font-family: system-ui;
 }
 
 .branches ul>li:not(ul>ul>li) {
     font-size: 26px;
+}
+
+.cart-page{
+    min-height: 554px;
 }
 
 .aboutwords h1, 
@@ -736,7 +760,7 @@ a {
 .contactus h1,
 .cart-page h1 {
     color: white;
-    background-color: red;
+    background-color: #eb2727;
     position: relative;
     width: fit-content;
     border-radius: 20px;
@@ -746,11 +770,21 @@ a {
     align-self: self-start;
 }
 
+.cart-page li {
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-family: system-ui;
+}
+
+.cart-page button {
+    margin-right: 15px;
+}
+
 .aboutwords h1:hover,
 .branches h1:hover,
 .contactus h1:hover,
 .cart-page h1:hover {
-    color: red;
+    color: #eb2727;
     background-color: white;
 }
 
@@ -774,6 +808,8 @@ a {
 
     .contactus h2 {
         font-size: larger;
+        font-family: system-ui;
+
     }
 
     .contactus p {
@@ -826,7 +862,7 @@ a {
 }
 
 .login-page {
-    background-image: url(imgs/loginwal3.jpg);
+    background-image: url(../imgs/loginwal3.jpg);
     background-size: cover;
     background-position: center top;
     animation: spiderDrop 3s ease-out forwards;
@@ -848,7 +884,7 @@ a {
     margin-left: auto;
     margin-right: auto;
     width: 420px;
-    background-image: url(imgs/signupwal1.jpg);
+    background-image: url(../imgs/signupwal1.jpg);
     background-size: cover;
     background-position-x: -80px;
     background-position-y: -60px;

@@ -60,7 +60,7 @@ function createAccount() {
 
         sessionStorage.setItem("loggedInUser", accountData.firstname);
 
-        window.location.href = "index.html";
+        window.location.href = "../index.html";
     }
 
     else {

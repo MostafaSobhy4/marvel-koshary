@@ -1,7 +1,7 @@
 let user = document.querySelector(".user");
 user.style.display = "none";
 
-if (sessionStorage.getItem("loggedInUser")) {
+if (sessionStorage.getItem("loggedInUser") || localStorage.getItem("loggedInUser")) {
     let nav_data = document.querySelector(".nav_data");
     let loggedInUser = sessionStorage.getItem("loggedInUser");
     
