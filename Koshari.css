@@ -182,7 +182,7 @@ a {
 
 /* Start Home */
 .home {
-    background-image: url(../imgs/kitchen-doodle-seamless-pattern-backround-600nw-2354307595.webp);
+    background-image: url(imgs/kitchen-doodle-seamless-pattern-backround-600nw-2354307595.webp);
     position: relative;
     padding-bottom: 200px;
     direction: rtl;
@@ -502,7 +502,7 @@ a {
 
 /* Start Footer */
 .footer {
-    background-image: url(../imgs/av.jpg);
+    background-image: url(imgs/av.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -862,7 +862,7 @@ a {
 }
 
 .login-page {
-    background-image: url(../imgs/loginwal3.jpg);
+    background-image: url(imgs/loginwal3.jpg);
     background-size: cover;
     background-position: center top;
     animation: spiderDrop 3s ease-out forwards;
@@ -884,7 +884,7 @@ a {
     margin-left: auto;
     margin-right: auto;
     width: 420px;
-    background-image: url(../imgs/signupwal1.jpg);
+    background-image: url(imgs/signupwal1.jpg);
     background-size: cover;
     background-position-x: -80px;
     background-position-y: -60px;
