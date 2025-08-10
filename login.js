@@ -18,13 +18,17 @@ loginForm.addEventListener("submit", (e) => {
     e.preventDefault();
     pass_msg.textContent = "";
     sessionStorage.removeItem("loggedInUser");
+    localStorage.removeItem("loggedInUser");
 
     let loggedIn = false;
+    let radio = document.querySelector('.sLog');
 
     for (let i = 0; i < accounts.length; i++) {
         if(accounts[i]["username"] === username.value && accounts[i]["password"] === password.value) {
             loggedIn = true;
-            sessionStorage.setItem("loggedInUser", accounts[i]["firstname"]);
+            if (radio.checked)
+                localStorage.setItem("loggedInUser", accounts[i]["firstname"]);
+            else sessionStorage.setItem("loggedInUser", accounts[i]["firstname"]);
             break;
         }
     }
@@ -33,6 +37,7 @@ loginForm.addEventListener("submit", (e) => {
         alert("You have successfully logged in!");
         window.location.href = "index.html";
     } else {
+        pass_msg.style.marginTop = "15px";
         pass_msg.textContent = "Username or password is incorrect.";
     }
 });

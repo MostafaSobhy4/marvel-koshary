@@ -85,7 +85,7 @@ a {
 }
 
 .header .container .nav_data span:not(.s) {
-    padding: 0px 5px;
+    padding: 0px 3px;
     color: red;
     font-weight: 900;
     transition: 0.3s;
@@ -93,7 +93,7 @@ a {
 
 .header .container .nav_data span:not(.s):hover {
     background-color: #ff00003b;
-    padding: 25px;
+    padding: 25px 10px;
 }
 
 .header .container .nav_data span a {
@@ -104,6 +104,13 @@ a {
 
 .header .container .nav_data span a i {
     margin-left: 5px;
+}
+
+.header .container .logout {
+    color: red;
+    background-color: white;
+    padding: 8px;
+    border-radius: 6px;
 }
 
 
@@ -135,7 +142,12 @@ a {
     .header .container .user {
         padding: 2px;
         font-size: small;
-        width: 116px;
+        width: fit-content;
+        text-align: center;
+    }
+
+    .header .container .logout {
+        margin: 5px 0;
     }
 }
 
@@ -144,19 +156,24 @@ a {
         max-width: 120px;
     }
     .header .container .nav_data span:not(.s) {
-        padding: 0px 3px;
+        padding: 0px 2px;
     }
     .header .container .nav_data span:not(.s):hover {
         background-color: #ff00003b;
-        padding: 0px 7px;
+        padding: 15px 5px;
     } 
     .header .container .nav_data span a {
         padding: 15px 5px;
+        font-size: 15px;
     }
     .header .container .user {
         padding: 2px;
         font-size: small;
         width: fit-content;
+        width: 90px;
+    }
+    .header .container .logout {
+        padding: 5px;
     }
 }
 /* End Header */
@@ -422,12 +439,12 @@ a {
     }
 }
 
-.menu .ordereAdd {
+.menu .orderAdd {
     display: none;
     position: fixed;
     top: 0;
     right: 0;
-    padding: 0px 20px;
+    padding: 0px 25px 15px;
     width: fit-content;
     height: fit-content;
     text-align: center;
@@ -460,12 +477,12 @@ a {
         flex-direction: column;
         align-items: center;
     }
-    .menu .ordereAdd {
+    .menu .orderAdd {
         right: auto;
         margin: 10px auto;
         justify-self: center;
     }
-    .menu .ordereAdd .ord {
+    .menu .orderAdd .ord {
         font-size: small;
     }
 }
@@ -643,11 +660,11 @@ a {
 /**************************************************************/
 
 
-/******************************************/
-/* Start About Us & Branches & Contact Us */
-/******************************************/
+/**********************************************************/
+/* Start About Us & Branches & Contact Us & Shopping Cart */
+/**********************************************************/
 
-.aboutwords, .branches, .contactus {
+.aboutwords, .branches, .contactus, .cart-page {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -716,7 +733,8 @@ a {
 
 .aboutwords h1, 
 .branches h1,
-.contactus h1 {
+.contactus h1,
+.cart-page h1 {
     color: white;
     background-color: red;
     position: relative;
@@ -730,7 +748,8 @@ a {
 
 .aboutwords h1:hover,
 .branches h1:hover,
-.contactus h1:hover {
+.contactus h1:hover,
+.cart-page h1:hover {
     color: red;
     background-color: white;
 }
@@ -747,7 +766,8 @@ a {
     }
     .aboutwords h1,
     .branches h1,
-    .contactus h1 {
+    .contactus h1,
+    .cart-page h1 {
         font-size: x-large;
         align-self: center;
     }
@@ -779,9 +799,9 @@ a {
 }
 
 
-/****************************************/
-/* End About Us & Branches & Contact Us */
-/****************************************/
+/********************************************************/
+/* End About Us & Branches & Contact Us & Shopping Cart */
+/********************************************************/
 
 
 /**************************************************************/
@@ -924,6 +944,17 @@ form + p {
 .login-page #toggle-password {
     cursor: pointer;
 }
+
+
+.login-page .stayLog {
+    margin-top: 10px;
+}
+
+.login-page .stayLog .sLog {
+    padding: 0px !important;
+    width: 17px !important;
+}
+
 
 @media (max-width: 768px) {
     .login-page, .signup-page {
