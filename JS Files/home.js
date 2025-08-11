@@ -107,7 +107,7 @@ else {
     go2login.textContent = "Press Here To Login First";
     orderAdd.appendChild(must);
     orderAdd.appendChild(go2login);
-    go2login.href = "../login.html";
+    go2login.href = "login.html";
     go2login.style.display = "block";
 
     addButtonItem.forEach((butt) => {
