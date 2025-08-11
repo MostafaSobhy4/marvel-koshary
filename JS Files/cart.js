@@ -50,6 +50,7 @@ if (orders.length > 0) {
     cart.appendChild(totalDiv);
 
     let buttonsDiv = document.createElement("div");
+    buttonsDiv.classList.add("Buttons");
     buttonsDiv.style.cssText = "margin-top: 10px;";
 
     let checkoutBtn = document.createElement("button");
@@ -99,6 +100,6 @@ if (sessionStorage.getItem("loggedInUser") || localStorage.getItem("loggedInUser
     }
     
     user.style.display = "block";
-    user.children[0].textContent = `Welcome, ${loggedInUser}`;
+    user.children[0].textContent = `Welcome, ${sessionStorage.getItem("loggedInUser") || localStorage.getItem("loggedInUser")}`;
     user.children[0].style.color = "white";
 }

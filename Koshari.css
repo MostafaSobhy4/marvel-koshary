@@ -860,6 +860,26 @@ a {
         align-items: self-start;
     }
 
+    .cart-page li {
+        font-size: 15px;
+        margin-bottom: 10px;
+        font-family: system-ui;
+        width: fit-content;
+    }
+    .cart-page button {
+        margin: 10px 85px 10px;
+        font-size: 13px;
+        width: 110px;
+    }
+    .cart-page .Buttons {
+        display: flex;
+        gap: 10px;
+        margin: 0;
+    }
+    .cart-page .Buttons button {
+        margin: 0 !important;
+        width: 80px;
+    }
 }
 
 

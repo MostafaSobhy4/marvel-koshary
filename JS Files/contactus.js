@@ -10,6 +10,6 @@ if (sessionStorage.getItem("loggedInUser") || localStorage.getItem("loggedInUser
     }
     
     user.style.display = "block";
-    user.children[0].textContent = `Welcome, ${loggedInUser}`;
+    user.children[0].textContent = `Welcome, ${sessionStorage.getItem("loggedInUser") || localStorage.getItem("loggedInUser")}`;
     user.children[0].style.color = "white";
 }
