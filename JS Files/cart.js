@@ -7,6 +7,8 @@ ordUl.classList.add("ordUl");
 ordUl.style.listStyle = "decimal";
 
 if (orders.length > 0) {
+    let totalPrice = 0;
+
     orders.forEach((order, i) => {
         let ordLi = document.createElement("li");
         let delItem = document.createElement("button");
@@ -18,29 +20,70 @@ if (orders.length > 0) {
 
         ordUl.appendChild(ordLi);
 
+        let price = parseFloat(order.it_price);
+        totalPrice += price * order.it_Quantity;
+
         delItem.onclick = function () {
             ordLi.remove();
             let updatedOrders = JSON.parse(localStorage.getItem(`Orders_${username}`)) || [];
-            updatedOrders = updatedOrders.filter((_, index) => index !== i);
+            updatedOrders.splice(i, 1);
             localStorage.setItem(`Orders_${username}`, JSON.stringify(updatedOrders));
 
             if (updatedOrders.length === 0) {
                 ordUl.remove();
+                totalDiv.remove();
+                buttonsDiv.remove();
                 let emptyMessage = document.createElement("p");
                 emptyMessage.textContent = "سلة المشتريات فارغه.";
+                emptyMessage.style.fontSize = "20px";
+                emptyMessage.style.marginRight = "15px";
                 cart.appendChild(emptyMessage);
             }
         };
     });
 
+    let totalDiv = document.createElement("div");
+    totalDiv.textContent = `الإجمالي: ${totalPrice} EGP`;
+    totalDiv.style.marginTop = "25px";
+    totalDiv.style.fontWeight = "bold";
+    totalDiv.style.marginRight = "15px";
+    cart.appendChild(totalDiv);
+
+    let buttonsDiv = document.createElement("div");
+    buttonsDiv.style.cssText = "margin-top: 10px;";
+
+    let checkoutBtn = document.createElement("button");
+    checkoutBtn.textContent = "إتمام الطلب";
+    checkoutBtn.style.cssText = "padding: 5px 10px;";
+    checkoutBtn.onclick = function () {
+        alert("تم إرسال طلبك بنجاح!");
+        localStorage.removeItem(`Orders_${username}`);
+        location.reload();
+    };
+
+    let clearBtn = document.createElement("button");
+    clearBtn.textContent = "إفراغ السلة";
+    clearBtn.style.cssText = "margin-top: 10px; padding: 5px 10px;";
+
+    clearBtn.onclick = function () {
+        localStorage.removeItem(`Orders_${username}`);
+        location.reload();
+    };
+
+    buttonsDiv.appendChild(clearBtn);
+    buttonsDiv.appendChild(checkoutBtn);
     cart.appendChild(ordUl);
+    cart.appendChild(totalDiv);
+    cart.appendChild(buttonsDiv);
+
 } else {
     let emptyMessage = document.createElement("p");
     emptyMessage.textContent = "سلة المشتريات فارغه.";
-    cart.appendChild(emptyMessage);
     emptyMessage.style.fontSize = "20px";
     emptyMessage.style.marginRight = "15px";
+    cart.appendChild(emptyMessage);
 }
+
 
 /*******************************************************************************************/
 

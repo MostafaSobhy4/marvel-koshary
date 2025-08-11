@@ -71,8 +71,6 @@ if (sessionStorage.getItem("loggedInUser") || localStorage.getItem("loggedInUser
             it_price.textContent = this.parentElement.parentElement.children[2].textContent;
             it_Quantity.textContent = "Quantity: " + this.parentElement.parentElement.children[3].children[0].value;
 
-
-
             orderAdd.style.display = "block";
 
             orderAdd.style.animation = "none";
@@ -128,4 +126,6 @@ else {
         }
     });
     pop.remove();
+    let cartlogo = document.querySelector(".cartlogo");
+    cartlogo.remove();
 }

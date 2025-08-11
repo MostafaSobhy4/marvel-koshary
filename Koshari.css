@@ -112,6 +112,7 @@ a {
     background-color: white;
     padding: 8px;
     border-radius: 6px;
+    cursor: pointer;
 }
 
 
@@ -454,9 +455,28 @@ a {
     z-index: 3;
     border-radius: 5px;
     box-shadow: 10px 10px 8px rgba(0, 0, 0, 0.324);
-    transition: all 0.3s ease-in-out; /* ⬅ ناعمة أكتر */
+    transition: pop 0.3s ease-in-out;
 }
 
+.menu .cartlogo {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    padding: 10px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: red;
+    color: black;
+    transition: box-shadow 0.5s;
+}
+
+.menu .cartlogo:hover {
+    box-shadow: 7px 7px 5px 1px rgba(0, 0, 0, 0.324);
+}
 
 @keyframes pop {
     0% {
@@ -495,6 +515,14 @@ a {
     }
     .menu .orderAdd .ord {
         font-size: small;
+    }
+    .menu .cartlogo {
+        position: fixed;
+        top: 10px;
+        left: 6px;
+        padding: 6px;
+        width: 40px;
+        height: 40px;
     }
 }
 /* End Menu */
