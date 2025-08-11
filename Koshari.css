@@ -26,12 +26,9 @@ a {
     text-decoration: none;
 }
 
-
 .container {
-    padding-left: 15px;
-    padding-right: 15px;
-    margin-left: auto;
-    margin-right: auto;
+    padding: 0 15px;
+    margin: 0 auto;
   }
   /* Small */
   @media (min-width: 768px) {
@@ -115,7 +112,6 @@ a {
     cursor: pointer;
 }
 
-
 @media (max-width: 768px) {
     .header .container {
         flex-direction: column;
@@ -123,8 +119,7 @@ a {
 
     .header .nav_data {
         display: flex;
-        margin-top: 30px;
-        margin-bottom: 20px;
+        margin: 30px 0 20px;
     }
 
     .header .nav_data span.s {
@@ -203,8 +198,7 @@ a {
     background-size: cover;
     display: flex;
     column-gap: 200px;
-    padding-top: var(--main-padding-or-margin-top-or-bottom);
-    padding-bottom: 50px;
+    padding: var(--main-padding-or-margin-top-or-bottom) 0 50px;
     align-items: center;
 }
 
@@ -307,8 +301,7 @@ a {
 
     .home .container .info p:first-child,
     .home .container .info p.name {
-        margin-left: auto;
-        margin-right: auto;
+        margin: 0 auto;
     }
 }
 /* End Home */
@@ -386,8 +379,7 @@ a {
 
 .menu .container .box-menu .item img {
     max-width: 100%;
-    margin-bottom: 20px;
-    margin-top: -30px;
+    margin: -30px 0 20px;
     max-height: 200px;
     width: 273px;
 }
@@ -549,8 +541,7 @@ a {
     position: relative;
     display: flex;
     justify-content: space-between;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding: 20px 0;
     align-items: center;
 }
 
@@ -644,8 +635,7 @@ a {
 }
 
 .footer .copy .container {
-    padding-top: 0;
-    padding-bottom: 0;
+    padding: 0;
 }
 
 .footer .copy p {
@@ -662,29 +652,22 @@ a {
         flex-direction: column-reverse;
         padding-bottom: 0;
     }
-
     .email {
-        margin-top: 10px;
-        margin-bottom: 20px;
+        margin: 10px 0 20px;
     }
-
     .email input {
         outline: none;
         text-align: center;
         width: 250px;
         height: 45px;
     }
-
     .box p:nth-child(1) {
         font-size: x-large;
         text-align: center;
     }
-
     .copy .container {
-        padding-left: 0px;
-        padding-right: 0px;
+        padding: 0;
     }
-
     .copy .rest-logo {
         display: none;
     }
@@ -708,8 +691,7 @@ a {
     flex-direction: column;
     align-items: center;
     direction: rtl;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
     padding: 80px;
     background-color: #ffffff4a;
 }
@@ -770,8 +752,7 @@ a {
 {
     font-size: 24px;
     line-height: 2;
-    margin-top: 10px;
-    margin-bottom: 40px;
+    margin: 10px 0 40px;
     font-family: system-ui;
 }
 
@@ -896,13 +877,11 @@ a {
 /*************************/
 
 .login, .signup { 
-    margin-top: 57px;
-    margin-bottom: 57px;
+    margin: 57px 0;
 }
 
 .login-page, .signup-page {
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
     width: fit-content;
     background-color: white;
     padding: 50px 70px;
@@ -929,8 +908,7 @@ a {
 }
 
 .signup-page {
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
     width: 420px;
     background-image: url(imgs/signupwal1.jpg);
     background-size: cover;
@@ -1042,8 +1020,7 @@ form + p {
 
 @media (max-width: 768px) {
     .login-page, .signup-page {
-        margin-left: auto;
-        margin-right: auto;
+        margin: 0 auto;
         width: fit-content;
         background-color: white;
         padding: 10px 20px;
@@ -1079,16 +1056,16 @@ form + p {
     }
 
     @keyframes spiderDrop {
-    0% {
-        background-position-y: -130px;
+        0% {
+            background-position-y: -130px;
+        }
+        50% {
+            background-position-y: -80px;
+        }
+        100% {
+            background-position-y: -130px;
+        }
     }
-    50% {
-        background-position-y: -80px;
-    }
-    100% {
-        background-position-y: -130px;
-    }
-}
 
 }
 
