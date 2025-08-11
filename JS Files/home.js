@@ -105,9 +105,12 @@ else {
     let must = document.createElement("p");
     let go2login = document.createElement("a");
     go2login.textContent = "Press Here To Login First";
-    go2login.href = "../login.html";
+    go2login.href = "";
     orderAdd.appendChild(must);
     orderAdd.appendChild(go2login);
+    go2login.onclick = function(e) {
+        window.location.href = "../login.html";
+    }
 
     addButtonItem.forEach((butt) => {
         butt.onclick = function() {
