@@ -6,6 +6,13 @@ let ordUl = document.createElement("ul");
 ordUl.classList.add("ordUl");
 ordUl.style.listStyle = "decimal";
 
+let totalDiv = document.createElement("div");
+totalDiv.style.marginTop = "25px";
+totalDiv.style.fontWeight = "bold";
+totalDiv.style.marginRight = "15px";
+cart.appendChild(totalDiv);
+
+
 if (orders.length > 0) {
     let totalPrice = 0;
 
@@ -26,9 +33,13 @@ if (orders.length > 0) {
         delItem.onclick = function () {
             ordLi.remove();
             let updatedOrders = JSON.parse(localStorage.getItem(`Orders_${username}`)) || [];
-            updatedOrders.splice(i, 1);
+            
+            let deletedItem = updatedOrders.splice(i, 1);
+            let pricedeletedItem = parseFloat(deletedItem[0].it_price);
+            let countdeletedItem = deletedItem[0].it_Quantity;
+            totalPrice -= pricedeletedItem * countdeletedItem;
+            totalDiv.textContent = `الإجمالي: ${totalPrice} EGP`;
             localStorage.setItem(`Orders_${username}`, JSON.stringify(updatedOrders));
-
             if (updatedOrders.length === 0) {
                 ordUl.remove();
                 totalDiv.remove();
@@ -42,13 +53,7 @@ if (orders.length > 0) {
         };
     });
 
-    let totalDiv = document.createElement("div");
     totalDiv.textContent = `الإجمالي: ${totalPrice} EGP`;
-    totalDiv.style.marginTop = "25px";
-    totalDiv.style.fontWeight = "bold";
-    totalDiv.style.marginRight = "15px";
-    cart.appendChild(totalDiv);
-
     let buttonsDiv = document.createElement("div");
     buttonsDiv.classList.add("Buttons");
     buttonsDiv.style.cssText = "margin-top: 10px;";
