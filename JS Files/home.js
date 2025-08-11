@@ -31,7 +31,7 @@ if (sessionStorage.getItem("loggedInUser") || localStorage.getItem("loggedInUser
     logout_btn.addEventListener("click", (e) => {
         sessionStorage.removeItem("loggedInUser");
         localStorage.removeItem("loggedInUser");
-        window.location.href = "../login.html";
+        window.location.href = "login.html";
     })
     
 }
