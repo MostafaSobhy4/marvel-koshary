@@ -1,4 +1,4 @@
-# Marvel Koshary 🍲🦸‍♂️
+# Marvel Koshary
 
 Marvel Koshary is a fun, interactive web page that combines the classic Egyptian dish koshary with a Marvel superhero theme. Users can explore the page to see different Koshary ingredients presented in a playful, themed way inspired by Marvel characters.
 
