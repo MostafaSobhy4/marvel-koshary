@@ -997,6 +997,11 @@ form + p {
     width: 270px;
 }
 
+.error {
+    margin-top: 10px;
+    color: red;
+}
+
 .login-page .password-field {
     width: 300px;
 }

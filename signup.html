@@ -51,30 +51,33 @@
                     
                         <form id="signup-form" method="POST" action="">
                             <label for="First Name">First Name:</label>
-                            <input type="text" id="firstname" placeholder="First Name" name="First Name" required>
+                            <input type="text" id="firstname" placeholder="First Name" name="First Name">
+                            <small class="error" id="FnameError"></small>
 
                             <label for="username">Username:</label>
-                            <input type="text" id="username" placeholder="User Name" name="username" required>
+                            <input type="text" id="username" placeholder="User Name" name="username">
+                            <small class="error" id="UnameError"></small>
 
                             <label for="email">Email:</label>
-                            <input type="email" id="email" placeholder="Email Address" name="email" required>
+                            <input type="email" id="email" placeholder="Email Address" name="email">
+                            <small class="error" id="emailError"></small>
 
                             <label for="password">Password:</label>
                             <!-- Password Field -->
                             <div class="password-field">
 
-                                <input type="password" id="signup-pass" name="signup-pass" placeholder="Password" required>
+                                <input type="password" id="signup-pass" name="signup-pass" placeholder="Password">
                                 <i class="fa-solid fa-eye-slash" id="toggle-password"></i>
                             </div>
+                            <small class="error" id="passError"></small>
 
                             <label for="password">Confirm Password:</label>
                             <!-- Confirm Password Field -->
                             <div class="password-field">
-                                <input type="password" id="confirm-pass" name="confirm-pass" placeholder="Confirm Password" required>
+                                <input type="password" id="confirm-pass" name="confirm-pass" placeholder="Confirm Password">
                                 <i class="fa-solid fa-eye-slash" id="toggle-confirm-password"></i>
                             </div>
-                            <!-- Error message -->
-                            <span id="pass-msg" style="color: red;margin-top: 10px;"></span>
+                            <small class="error" id="confpassError"></small>
                             <br>
                             <button class="button_signup" type="submit">Sign Up</button>
                         </form>

@@ -1,5 +1,4 @@
 // Welcome To User
-
 let user = document.querySelector(".user");
 let logout_btn = document.querySelector(".logout");
 
